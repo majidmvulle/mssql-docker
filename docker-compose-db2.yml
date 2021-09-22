@@ -1,0 +1,15 @@
+version: "3.9"
+
+volumes:
+    scripts:
+    mssqlserver:  
+    mssqluser:
+
+services:
+  db2:
+    build: .
+    ports:
+     - "1433:1433"
+    volumes:
+      - mssqlserver:/var/opt/mssql
+      - mssqluser:/var/opt/sqlserver
